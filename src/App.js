@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
 
 const App = () => {
   const [searchBarActive, setSearchBarActive] = useState(false);
@@ -16,6 +17,7 @@ const App = () => {
         setSearchBarActive={setSearchBarActive}
         searchBarActive={searchBarActive}
       />
+      <Home />
     </div>
   );
 };
