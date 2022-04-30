@@ -1,9 +1,9 @@
 @import "../../globals.scss";
 
 .episode {
-  margin: 3px 8px 3px 0;
-  padding: 0;
-  width: 32%;
+  margin: 3px 0;
+  padding: 0 10px 0 0;
+  width: calc(100% / 3);
   overflow: hidden;
   display: flex;
   align-items: center;

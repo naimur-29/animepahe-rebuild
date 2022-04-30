@@ -1,13 +1,13 @@
 import "./Navbar.scss";
 
-const Navbar = ({ setSearchBarActive, searchBarActive }) => {
+const Navbar = ({ setSearchBarActive, searchBarActive, setPage }) => {
   return (
     <div className="navbar">
       <div className="line"></div>
       <div className="container">
         <div className="left">
-          <div className="logo">
-            <a href="#home">
+          <div className="logo" onClick={() => setPage("home")}>
+            <a href="/">
               <img
                 src="https://animepahe.com/app/images/apdoesnthavelogotheysaidapistooplaintheysaid.svg"
                 alt="logo"
@@ -17,10 +17,10 @@ const Navbar = ({ setSearchBarActive, searchBarActive }) => {
         </div>
         <div className="right">
           <ul>
-            <li>#stayhome</li>
-            <li>anime</li>
-            <li>queue</li>
-            <li>discord</li>
+            <li onClick={() => setPage("home")}>#stayhome</li>
+            <li onClick={() => setPage("anime")}>anime</li>
+            <li onClick={() => setPage("queue")}>queue</li>
+            <li onClick={() => setPage("discord")}>discord</li>
           </ul>
           <input
             type="text"

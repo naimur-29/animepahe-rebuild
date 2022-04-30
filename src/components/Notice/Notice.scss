@@ -1,0 +1,45 @@
+@import "../../globals.scss";
+
+.notice {
+  background-color: #d5015b;
+  color: #fff;
+  padding: 12px 18px;
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+
+      a:link,
+      a:visited {
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+
+    .right {
+      line-height: 1;
+      font-size: 1.5rem;
+      font-weight: 900;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: all 0.15s ease;
+
+      &:hover {
+        opacity: 1;
+        transition: all 0.15s ease;
+      }
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
