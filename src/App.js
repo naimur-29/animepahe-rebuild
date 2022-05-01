@@ -3,6 +3,7 @@ import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Notice from "./components/Notice/Notice";
+import Anime from "./components/Anime/Anime";
 
 const App = () => {
   const [searchBarActive, setSearchBarActive] = useState(false);
@@ -29,7 +30,7 @@ const App = () => {
         item === "home" ? (
           <Home />
         ) : item === "anime" ? (
-          <Home />
+          <Anime />
         ) : item === "queue" ? (
           <Home />
         ) : (

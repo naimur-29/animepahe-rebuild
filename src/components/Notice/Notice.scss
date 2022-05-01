@@ -1,8 +1,8 @@
 @import "../../globals.scss";
 
 .notice {
-  background-color: #d5015b;
-  color: #fff;
+  background-color: $magentaLight;
+  color: $textColor;
   padding: 12px 18px;
 
   .container {

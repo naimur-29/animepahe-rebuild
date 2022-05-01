@@ -11,8 +11,13 @@ const Home = () => {
       <p>{pages[page].length ? "Latest Releases" : "Loading..."}</p>
       <div className="container">
         {pages[page] &&
-          pages[page].map((item) => (
-            <Episode img={item.img} title={item.title} serial={item.serial} />
+          pages[page].map((item, i) => (
+            <Episode
+              img={item.img}
+              title={item.title}
+              serial={item.serial}
+              key={i}
+            />
           ))}
       </div>
       <div className="page-scrollbar">

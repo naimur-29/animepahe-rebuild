@@ -1,7 +1,7 @@
 @import "../../globals.scss";
 
 .home {
-  color: #fff;
+  color: $textColor;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0;
@@ -47,7 +47,7 @@
       transform: translate(-10%, 0);
 
       li {
-        color: #bc0150;
+        color: $magentaPrimary;
         background-color: #222;
         border: 1px solid #000;
         width: 35px;
@@ -68,8 +68,8 @@
           border-radius: 0 4px 4px 0;
         }
         &:nth-child(3) {
-          color: #fff;
-          background-color: #bc0150;
+          color: $textColor;
+          background-color: $magentaPrimary;
         }
       }
     }

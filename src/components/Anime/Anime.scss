@@ -1,0 +1,80 @@
+@import "../../globals.scss";
+
+.anime {
+  color: $magentaPrimary;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .heading {
+    color: $textColor;
+    margin-left: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 100;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 27px;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    .index {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 5px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        color: $textColor;
+      }
+
+      &.active {
+        background-color: $magentaLight;
+        color: $textColor;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+
+    .left {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a:link,
+    a:visited {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    a:hover,
+    a:active {
+      color: $textColor;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
