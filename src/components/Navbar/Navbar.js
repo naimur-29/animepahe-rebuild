@@ -1,6 +1,11 @@
 import "./Navbar.scss";
 
-const Navbar = ({ setSearchBarActive, searchBarActive, setPage }) => {
+const Navbar = ({
+  setSearchBarActive,
+  searchBarActive,
+  setPage,
+  setSearchData,
+}) => {
   return (
     <div className="navbar">
       <div className="line"></div>
@@ -27,6 +32,7 @@ const Navbar = ({ setSearchBarActive, searchBarActive, setPage }) => {
             placeholder="Search"
             className={`search-bar ${searchBarActive && "active"}`}
             onClick={() => setSearchBarActive(true)}
+            onChange={(event) => setSearchData(event.target.value)}
           />
         </div>
       </div>
