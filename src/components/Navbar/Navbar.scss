@@ -24,10 +24,12 @@
     max-width: 1100px;
     height: 47px;
     margin: 0 auto;
+    transition: all 0.35s ease-in-out;
 
     .left {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       flex: 1;
 
       .logo {
@@ -39,6 +41,43 @@
         @media (max-width: 768px) {
           padding: 0 15px;
         }
+      }
+
+      .hamburger-menu {
+        border: 1.5px solid $bgGrayLight;
+        border-radius: 4px;
+        width: 55px;
+        height: calc(47px * 0.8);
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+
+        .bar {
+          width: 45%;
+          height: 2px;
+          background: $hamburger-menu;
+          margin: 3px 0;
+        }
+
+        @media (max-width: 768px) {
+          border: none;
+        }
+
+        @media (min-width: 990px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 990px) {
+        flex: 100%;
       }
     }
 
@@ -97,11 +136,84 @@
 
       @media (max-width: 990px) {
         display: none;
+        flex: 0%;
       }
     }
 
     @media (max-width: 768px) {
       height: 54px;
+    }
+
+    @media (max-width: 990px) {
+      align-items: flex-start;
+      flex-wrap: wrap;
+      height: 47px;
+      transition: all 0.35s ease-in-out;
+
+      .right {
+        flex: 100%;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          transform: translateX(0%);
+          padding: 0;
+          margin: 0;
+          text-align: left;
+
+          li {
+            width: 100%;
+
+            @media (max-width: 768px) {
+              width: 96%;
+            }
+          }
+
+          @media (max-width: 768px) {
+            align-items: center;
+          }
+        }
+
+        .search-bar {
+          float: right;
+          transform: translateY(2px);
+
+          &.active {
+            height: 36px;
+
+            @media (max-width: 768px) {
+              width: calc(96% - 4px);
+            }
+          }
+
+          @media (max-width: 768px) {
+            width: 96%;
+            float: none;
+          }
+        }
+
+        @media (max-width: 768px) {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &.active {
+    .container {
+      height: 245px;
+
+      .right {
+        display: inline-block;
+      }
+
+      @media (max-width: 768px) {
+        height: 260px;
+      }
     }
   }
 }

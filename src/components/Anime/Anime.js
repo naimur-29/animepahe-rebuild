@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Anime.scss";
 import { IndexData } from "./IndexData";
 
-const Anime = () => {
+const Anime = ({ hamburgerMenu, setHamburgerMenu }) => {
   const [index, setIndex] = useState("A");
   const indexArr = [
     "#",
@@ -35,7 +35,7 @@ const Anime = () => {
   ];
 
   return (
-    <div className="anime">
+    <div className="anime" onClick={() => setHamburgerMenu(false)}>
       <p className="heading">Index</p>
       <ul>
         {indexArr.map((item, i) => (

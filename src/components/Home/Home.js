@@ -3,11 +3,11 @@ import "./Home.scss";
 import Episode from "../Episode/Episode";
 import { pages } from "./episodes-data";
 
-const Home = () => {
+const Home = ({ hamburgerMenu, setHamburgerMenu }) => {
   const [page, setPage] = useState(0);
 
   return (
-    <div className="home">
+    <div className="home" onClick={() => setHamburgerMenu(false)}>
       <p>{pages[page].length ? "Latest Releases" : "Loading..."}</p>
       <div className="container">
         {pages[page] &&

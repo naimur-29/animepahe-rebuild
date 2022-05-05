@@ -5,9 +5,11 @@ const Navbar = ({
   searchBarActive,
   setPage,
   setSearchData,
+  hamburgerMenu,
+  setHamburgerMenu,
 }) => {
   return (
-    <div className="navbar">
+    <div className={`navbar ${hamburgerMenu && "active"}`}>
       <div className="line"></div>
       <div className="container">
         <div className="left">
@@ -19,13 +21,49 @@ const Navbar = ({
               />
             </a>
           </div>
+          <div
+            className="hamburger-menu"
+            onClick={() => setHamburgerMenu(!hamburgerMenu)}
+          >
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
         </div>
         <div className="right">
           <ul>
-            <li onClick={() => setPage("home")}>#stayhome</li>
-            <li onClick={() => setPage("anime")}>anime</li>
-            <li onClick={() => setPage("queue")}>queue</li>
-            <li onClick={() => setPage("discord")}>discord</li>
+            <li
+              onClick={() => {
+                setPage("home");
+                setHamburgerMenu(!hamburgerMenu);
+              }}
+            >
+              #stayhome
+            </li>
+            <li
+              onClick={() => {
+                setPage("anime");
+                setHamburgerMenu(!hamburgerMenu);
+              }}
+            >
+              anime
+            </li>
+            <li
+              onClick={() => {
+                setPage("queue");
+                setHamburgerMenu(!hamburgerMenu);
+              }}
+            >
+              queue
+            </li>
+            <li
+              onClick={() => {
+                setPage("discord");
+                setHamburgerMenu(!hamburgerMenu);
+              }}
+            >
+              discord
+            </li>
           </ul>
           <input
             type="text"

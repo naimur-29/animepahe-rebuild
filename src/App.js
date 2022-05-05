@@ -12,12 +12,16 @@ const App = () => {
   const [searchData, setSearchData] = useState("");
   const [notice, setNotice] = useState(true);
   const [page, setPage] = useState("home");
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   return (
     <div
       className="app"
       onClick={() => {
-        if (searchBarActive) setSearchBarActive(false);
+        if (searchBarActive) {
+          setSearchBarActive(false);
+          setSearchData("");
+        }
       }}
     >
       <Navbar
@@ -25,6 +29,8 @@ const App = () => {
         searchBarActive={searchBarActive}
         setPage={setPage}
         setSearchData={setSearchData}
+        hamburgerMenu={hamburgerMenu}
+        setHamburgerMenu={setHamburgerMenu}
       />
 
       <div className="container">
@@ -35,7 +41,8 @@ const App = () => {
         >
           {searchData &&
             IndexData.filter(
-              (item) => item.toLowerCase().startsWith(searchData) && item
+              (item) =>
+                item.toLowerCase().startsWith(searchData.toLowerCase()) && item
             ).map(
               (element, index) => index < 8 && <SearchResult title={element} />
             )}
@@ -45,9 +52,15 @@ const App = () => {
       <Notice notice={notice} setNotice={setNotice} />
 
       {page === "home" ? (
-        <Home />
+        <Home
+          hamburgerMenu={hamburgerMenu}
+          setHamburgerMenu={setHamburgerMenu}
+        />
       ) : page === "anime" ? (
-        <Anime />
+        <Anime
+          hamburgerMenu={hamburgerMenu}
+          setHamburgerMenu={setHamburgerMenu}
+        />
       ) : page === "queue" ? (
         ""
       ) : (
