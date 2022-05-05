@@ -204,15 +204,17 @@
   }
 
   &.active {
-    .container {
-      height: 245px;
+    @media (max-width: 990px) {
+      .container {
+        height: 245px;
 
-      .right {
-        display: inline-block;
-      }
+        .right {
+          display: inline-block;
+        }
 
-      @media (max-width: 768px) {
-        height: 260px;
+        @media (max-width: 768px) {
+          height: 260px;
+        }
       }
     }
   }
