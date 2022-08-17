@@ -50,19 +50,19 @@ const Navbar = ({
             </li>
             <li
               onClick={() => {
-                setPage("queue");
+                setPage("manage");
                 setHamburgerMenu(!hamburgerMenu);
               }}
             >
-              queue
+              manage
             </li>
             <li
               onClick={() => {
-                setPage("discord");
+                setPage("admin");
                 setHamburgerMenu(!hamburgerMenu);
               }}
             >
-              discord
+              admin
             </li>
           </ul>
           <input

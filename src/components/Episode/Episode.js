@@ -4,7 +4,14 @@ import "./Episode.scss";
 const Episode = ({ img, title, serial }) => {
   return (
     <div className="episode">
-      <a href="/" className="link">
+      <a
+        href={`https://www.google.com/search?q=${title
+          .replace(/\s+/g, "+")
+          .toLowerCase()}+episode+${serial}+anime+animepahe`}
+        target="_blank"
+        rel="noreferrer"
+        className="link"
+      >
         <div className="wrapper">
           <svg class="play-button" viewBox="0 0 200 200" alt="Play Video">
             <circle
@@ -18,7 +25,13 @@ const Episode = ({ img, title, serial }) => {
             <polygon points="70, 55 70, 145 145, 100" fill="#fff"></polygon>
           </svg>
           <div className="text-wrapper">
-            <a href="/">
+            <a
+              href={`https://www.google.com/search?q=${title
+                .replace(/\s+/g, "+")
+                .toLowerCase()}+episode+${serial}+anime+animepahe`}
+              target="_blank"
+              rel="noreferrer"
+            >
               {title.length > 35 ? `${title.slice(0, 34)}...` : title}
             </a>
             <h2>{serial}</h2>

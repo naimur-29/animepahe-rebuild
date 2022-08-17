@@ -54,13 +54,27 @@ const Anime = ({ hamburgerMenu, setHamburgerMenu }) => {
             index !== "#"
               ? item.startsWith(index) &&
                 (i + 1) % 2 === 0 && (
-                  <a href="/" key={i}>
+                  <a
+                    href={`https://www.google.com/search?q=${item
+                      .replace(/\s+/g, "+")
+                      .toLowerCase()}+anime+animepahe`}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={i}
+                  >
                     {item}
                   </a>
                 )
               : !indexArr.includes(item[0]) &&
                 (i + 1) % 2 === 0 && (
-                  <a href="/" key={i}>
+                  <a
+                    href={`https://www.google.com/search?q=${item
+                      .replace(/\s+/g, "+")
+                      .toLowerCase()}+anime+animepahe`}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={i}
+                  >
                     {item}
                   </a>
                 )
@@ -71,13 +85,27 @@ const Anime = ({ hamburgerMenu, setHamburgerMenu }) => {
             index !== "#"
               ? item.startsWith(index) &&
                 (i + 1) % 2 !== 0 && (
-                  <a href="/" key={i}>
+                  <a
+                    href={`https://www.google.com/search?q=${item
+                      .replace(/\s+/g, "+")
+                      .toLowerCase()}+anime+animepahe`}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={i}
+                  >
                     {item}
                   </a>
                 )
               : !indexArr.includes(item[0]) &&
                 (i + 1) % 2 !== 0 && (
-                  <a href="/" key={i}>
+                  <a
+                    href={`https://www.google.com/search?q=${item
+                      .replace(/\s+/g, "+")
+                      .toLowerCase()}+anime+animepahe`}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={i}
+                  >
                     {item}
                   </a>
                 )

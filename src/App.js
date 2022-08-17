@@ -61,7 +61,7 @@ const App = () => {
           hamburgerMenu={hamburgerMenu}
           setHamburgerMenu={setHamburgerMenu}
         />
-      ) : page === "queue" ? (
+      ) : page === "manage" ? (
         ""
       ) : (
         ""
