@@ -22,7 +22,7 @@ Dev Goal: Learn React JS & to reconstruct another existing site...
 1. Used React JS Framework. <br/>
 2. NPM as package manager. <br>
 3. Vanilla JavaScript Language. <br/>
-4. HTML & Vanilla CSS.
+4. HTML & SCSS/SASS.
 
 ### Some features of my project: <br />
 1. This site is responsive for mobile and Desktop. <br />
